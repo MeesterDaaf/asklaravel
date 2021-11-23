@@ -15,6 +15,9 @@ class CreateScoreboardAnwsersTable extends Migration
     {
         Schema::create('scoreboard_anwsers', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('answer_id')->constrained();
+            $table->integer('points');
+            $table->dateTime('datetime');
             $table->timestamps();
         });
     }
