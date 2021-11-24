@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use Database\Factories\Enums\TagEnum;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,7 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Tag::factory(6)->create();
+        \App\Models\Tag::factory(count(TagEnum::cases()))->create();
         // \App\Models\User::factory(10)->create();
 
     }

@@ -9,13 +9,15 @@ use Spatie\Enum\Faker\FakerEnumProvider;
 class TagFactory extends Factory
 {
 
+
     /**
-     * Define the model's default state.
+     * Store random tags.
      *
      * @return array
      */
     public function definition()
     {
+
         $this->faker->addProvider(new FakerEnumProvider($this->faker));
 
         $randomTag = $this->faker->unique()->randomEnumValue(TagEnum::class);
