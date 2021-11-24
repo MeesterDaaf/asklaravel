@@ -19,11 +19,9 @@ class TagFactory extends Factory
 
         $this->faker->addProvider(new FakerEnumProvider($this->faker));
 
-        $randomTag = $this->faker->unique()->randomEnumValue(TagEnum::class);
-
         return
             [
-                'name' => $randomTag
+                'name' => $this->faker->unique()->randomEnumValue(TagEnum::class)
             ];
     }
 }
