@@ -9,7 +9,6 @@ use Spatie\Enum\Faker\FakerEnumProvider;
 class TagFactory extends Factory
 {
 
-
     /**
      * Store random tags.
      *
