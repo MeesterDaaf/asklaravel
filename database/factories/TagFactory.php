@@ -9,8 +9,6 @@ use Spatie\Enum\Faker\FakerEnumProvider;
 class TagFactory extends Factory
 {
 
-    public $tag;
-
     /**
      * Define the model's default state.
      *
