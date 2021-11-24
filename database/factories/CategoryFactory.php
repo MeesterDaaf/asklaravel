@@ -13,10 +13,8 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
-        $categoryName = $this->faker->unique()->randomElement(['routing', 'middleware', 'requests']);
-        
         return [
-            'name'  => $categoryName
+            'name'  => $this->faker->unique()->randomElement(['routing', 'middleware', 'requests'])
         ];
     }
 }

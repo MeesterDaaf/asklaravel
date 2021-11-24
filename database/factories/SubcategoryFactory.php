@@ -14,7 +14,7 @@ class SubcategoryFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name'  => $this->faker->unique()->randomElement(['route groups', 'named routes', 'Loops'])
         ];
     }
 }
